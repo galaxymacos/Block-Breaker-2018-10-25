@@ -51,6 +51,8 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private Sprite[] Backgrounds;
     [SerializeField] private GameObject backgroundCover;
 
+    public GameObject[] allBalls;
+
     void LoadLvl() {
         ball.GetComponent<SpriteRenderer>().color = originalBallColor;
         if (currBoard) {
@@ -68,12 +70,14 @@ public class GameManager : MonoBehaviour {
 
     public void Death() {
         lives--;
+        MoveBall newBallScript = GameObject.FindGameObjectWithTag("ball").GetComponent<MoveBall>();
         if (lives > 0) {
-            ballScript.Init();
+//            ballScript.Init();    // TODO delete
+            newBallScript.Init();
         }
         else {
             inGame = false;
-            ballScript.Init();
+            newBallScript.Init();
             score.text = "Game over\nScore:" + point.ToString("D8");
             rankingBoard.SetActive(true);
         }
@@ -99,7 +103,7 @@ public class GameManager : MonoBehaviour {
             }
 
             ClearAllEffect();
-            ballScript.Init();
+            GameObject.FindGameObjectWithTag("ball").GetComponent<MoveBall>().Init();
             LoadLvl();
         }
     }
@@ -145,6 +149,15 @@ public class GameManager : MonoBehaviour {
         public override string ToString() {
             return Name + ":" + Score;
         }
+
+        public string DisplayMessage() {
+            if (string.IsNullOrEmpty(Name)||Score == 0) {
+                return "";
+            }
+            else {
+                return Name + "            " + Score;
+            }
+        }
     }
 
 
@@ -162,7 +175,7 @@ public class GameManager : MonoBehaviour {
     }
 
     private void LoadPlayerInfo() {
-        PlayerPrefs.DeleteAll();    // TODO delete later
+//        PlayerPrefs.DeleteAll();    // TODO delete later
         rankingList = PlayerPrefs.GetString("RankingList", "");
         print(rankingList);
         if (rankingList != "") {

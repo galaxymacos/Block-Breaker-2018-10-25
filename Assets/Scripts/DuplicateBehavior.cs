@@ -8,7 +8,7 @@ public class DuplicateBehavior : MonoBehaviour
     private GameManager code;
     private GameObject ball;
     [SerializeField] private Transform copiedBall;
-    private bool isRunned;
+    private bool hasCollided;    // prevent it from being triggered more than once
 
     // Use this for initialization
     void Start()
@@ -26,12 +26,20 @@ public class DuplicateBehavior : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         GameObject.Find("GameManager").GetComponent<AudioSource>().Play();
-        if (other.gameObject.CompareTag("paddle")&&!isRunned)
+        code.allBalls = GameObject.FindGameObjectsWithTag("ball");
+        if (other.gameObject.CompareTag("paddle")&&!hasCollided)
         {
-            isRunned = true;
+            hasCollided = true;
             var extraBall = Instantiate(ball, ball.transform,true);
             MoveBall moveBall = extraBall.GetComponent<MoveBall>();
+            moveBall.transform.parent = GameObject.FindGameObjectWithTag("paddle").transform;
             moveBall.isDupBall = true;
+            moveBall.dupBallId = 1;
+            var extraBall2 = Instantiate(ball, ball.transform,true);
+            MoveBall moveBall2 = extraBall2.GetComponent<MoveBall>();
+            moveBall2.transform.parent = GameObject.FindGameObjectWithTag("paddle").transform;
+            moveBall2.isDupBall = true;
+            moveBall2.dupBallId = 2;
             Destroy(gameObject);
         }
 

@@ -27,6 +27,7 @@ public class MoveBall : MonoBehaviour {
     [SerializeField] private float vForceMultiplier = 2f;
 
     public bool isDupBall;
+    public int dupBallId;
 
     private float forceMagnitude;
 
@@ -41,10 +42,12 @@ public class MoveBall : MonoBehaviour {
 
     public void Init() {
         transform.parent = myParent;
+
         transform.localPosition = initPos;
         ball.simulated = false;
         ball.velocity = new Vector2(0, 0);
         onlyOnce = false;
+        isDupBall = false;    // BUG don't know if there is a bug or not
     }
 
     private Vector2 velocityCacheEachHit;
@@ -55,7 +58,16 @@ public class MoveBall : MonoBehaviour {
             onlyOnce = true;
             ball.simulated = true;
             ball.transform.parent = null;
+            if(!isDupBall)
             ball.AddForce(new Vector2(dir, dir));
+            else {
+                if (dupBallId == 1) {
+                    ball.velocity = code.allBalls[0].GetComponent<Rigidbody2D>().velocity.Rotate(30);
+                }
+                else if (dupBallId == 2) {
+                    ball.velocity = code.allBalls[0].GetComponent<Rigidbody2D>().velocity.Rotate(-30);
+                }
+            }
             forceMagnitude = Mathf.Sqrt(dir * dir + dir * dir);
             velocityCacheEachHit = ball.velocity;
         }
@@ -63,12 +75,15 @@ public class MoveBall : MonoBehaviour {
         // Bug the bug, but performance is so bad
         velocityCacheEachHit = ball.velocity;
     }
+    
+    
 
 
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("death")) {
             if (GameObject.FindGameObjectsWithTag("ball").Length > 1) {
                 Destroy(gameObject);
+                Debug.Log("copied ball death");
             }
             else {
                 code.Death();
@@ -88,7 +103,7 @@ public class MoveBall : MonoBehaviour {
             ball.velocity = new Vector2(0, 0);
             float xForce = deflectionFactor * diffX / (paddleSize / 2) * dir;
             float sqrt = Mathf.Sqrt(xForce * xForce + dir * dir);
-            ball.AddForce(new Vector2(xForce/sqrt*forceMagnitude, dir/sqrt*forceMagnitude));
+            ball.AddForce(new Vector2(xForce / sqrt * forceMagnitude, dir / sqrt * forceMagnitude));
         }
         else if (other.gameObject.CompareTag("wall")) {
             if (Mathf.Abs(ball.velocity.x) < vForceMinX) {
@@ -112,5 +127,18 @@ public class MoveBall : MonoBehaviour {
                 ball.velocity = new Vector2(velX, vForceMinY * vForceMultiplier);
             }
         }
+    }
+}
+
+public static class Vector2Extension {
+    public static Vector2 Rotate(this Vector2 v, float degrees) {
+        float sin = Mathf.Sin(degrees * Mathf.Deg2Rad);
+        float cos = Mathf.Cos(degrees * Mathf.Deg2Rad);
+
+        float tx = v.x;
+        float ty = v.y;
+        v.x = (cos * tx) - (sin * ty);
+        v.y = (sin * tx) + (cos * ty);
+        return v;
     }
 }

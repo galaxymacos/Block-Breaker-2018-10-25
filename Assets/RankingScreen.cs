@@ -18,6 +18,7 @@ public class RankingScreen : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
+//        PlayerPrefs.DeleteAll();    // TODO delete
         code = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
@@ -48,9 +49,9 @@ public class RankingScreen : MonoBehaviour {
             index--;
         }
 
-        first.text = code.playersInfo[0].ToString();
-        second.text = code.playersInfo[1].ToString();
-        third.text = code.playersInfo[2].ToString();
+        first.text = code.playersInfo[0].DisplayMessage();
+        second.text = code.playersInfo[1].DisplayMessage();
+        third.text = code.playersInfo[2].DisplayMessage();
         
         isConfirmedQuit = true;
     }

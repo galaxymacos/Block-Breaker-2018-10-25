@@ -35,7 +35,7 @@ public class BrickBehaviour : MonoBehaviour {
         float destiny = Random.Range(1, 100);
         if (destiny > 0 && destiny <= PowerUPPercentage) {
             GameObject itemReadyToDrop = dropItemList[Random.Range(0, dropItemList.Length)];
-            Instantiate(itemReadyToDrop, ball.transform.position, Quaternion.identity);
+            Instantiate(itemReadyToDrop, other.gameObject.transform.position, Quaternion.identity);
         }
 
         code.AddPoints();
@@ -46,8 +46,12 @@ public class BrickBehaviour : MonoBehaviour {
         }
         else {
             code.PlayBlockBreakSound(gameObject.transform.position.x);
-            GetComponent<SpriteRenderer>().color = new Color(Random.Range(0,255),Random.Range(0,255),Random.Range(0,255));
+            GetComponent<SpriteRenderer>().color = new Color(CreateRandomValue(0,255),CreateRandomValue(0,255),CreateRandomValue(0,255));
         }
+    }
+
+    private float CreateRandomValue(int min, int max) {
+        return Random.Range(min, max + 1) - Mathf.Epsilon;
     }
 
     private void OnTriggerEnter2D(Collider2D other) // trigger when the ball has fire effect
