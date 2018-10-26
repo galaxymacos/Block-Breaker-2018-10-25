@@ -18,7 +18,7 @@ public class UnbreakableBrickBehavior : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
         code.PlayDingSound(gameObject.transform.position.x);
     }
+	
 }

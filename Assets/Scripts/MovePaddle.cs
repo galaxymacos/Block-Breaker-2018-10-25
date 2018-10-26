@@ -8,7 +8,7 @@ public class MovePaddle : MonoBehaviour {
     [SerializeField] private Slider slider;
 
     [SerializeField] private float positionLimit = 2.0f;
-
+    [SerializeField] private GameObject pauseScreen;
     private GameObject ball;
 
     private GameManager code;
@@ -21,9 +21,12 @@ public class MovePaddle : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (code.inGame) {
+        if (code.inGame&&!pauseScreen.activeSelf) {
+            
             float pos = slider.value;
-            transform.position = new Vector3(pos * positionLimit, transform.position.y, transform.position.z);
+            var position = transform.position;
+            position = new Vector3(pos * positionLimit, position.y, position.z);
+            transform.position = position;
         }
     }
 }

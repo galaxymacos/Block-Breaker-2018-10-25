@@ -70,9 +70,6 @@ public class BrickBehaviour : MonoBehaviour {
         for (int i = 0; i < blockHp; i++) {
             code.AddPoints();
         }
-
-        Debug.Log("Destroy a block in trigger ");
-
         Destroy(gameObject);
     }
 }

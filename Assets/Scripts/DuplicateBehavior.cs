@@ -32,12 +32,13 @@ public class DuplicateBehavior : MonoBehaviour
             hasCollided = true;
             var extraBall = Instantiate(ball, ball.transform,true);
             MoveBall moveBall = extraBall.GetComponent<MoveBall>();
-            moveBall.transform.parent = GameObject.FindGameObjectWithTag("paddle").transform;
+            moveBall.transform.SetParent(GameObject.FindGameObjectWithTag("paddle").transform);
             moveBall.isDupBall = true;
             moveBall.dupBallId = 1;
             var extraBall2 = Instantiate(ball, ball.transform,true);
             MoveBall moveBall2 = extraBall2.GetComponent<MoveBall>();
-            moveBall2.transform.parent = GameObject.FindGameObjectWithTag("paddle").transform;
+            moveBall2.transform.SetParent(GameObject.FindGameObjectWithTag("paddle").transform);
+
             moveBall2.isDupBall = true;
             moveBall2.dupBallId = 2;
             Destroy(gameObject);

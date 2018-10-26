@@ -910,6 +910,7 @@ MonoBehaviour:
   - {fileID: 1554693797339256, guid: c748fb92280162f4cacb17fe52687247, type: 2}
   - {fileID: 1144415396723640, guid: 2956d9905a62a67448d26c0253c9860c, type: 2}
   - {fileID: 1554693797339256, guid: 9c44785fba345814c9d40d644ec825b5, type: 2}
+  - {fileID: 1554693797339256, guid: d7cfd194d81959547be8249ea65161ad, type: 2}
   PowerUPPercentage: 20
   blockHp: 1
 --- !u!114 &114116352034095100
@@ -957,6 +958,7 @@ MonoBehaviour:
   - {fileID: 1554693797339256, guid: c748fb92280162f4cacb17fe52687247, type: 2}
   - {fileID: 1144415396723640, guid: 2956d9905a62a67448d26c0253c9860c, type: 2}
   - {fileID: 1554693797339256, guid: 9c44785fba345814c9d40d644ec825b5, type: 2}
+  - {fileID: 1554693797339256, guid: d7cfd194d81959547be8249ea65161ad, type: 2}
   PowerUPPercentage: 20
   blockHp: 1
 --- !u!114 &114269637490148688
@@ -986,6 +988,7 @@ MonoBehaviour:
   - {fileID: 1554693797339256, guid: c748fb92280162f4cacb17fe52687247, type: 2}
   - {fileID: 1144415396723640, guid: 2956d9905a62a67448d26c0253c9860c, type: 2}
   - {fileID: 1554693797339256, guid: 9c44785fba345814c9d40d644ec825b5, type: 2}
+  - {fileID: 1554693797339256, guid: d7cfd194d81959547be8249ea65161ad, type: 2}
   PowerUPPercentage: 20
   blockHp: 1
 --- !u!114 &114457066324776728
@@ -1004,6 +1007,7 @@ MonoBehaviour:
   - {fileID: 1554693797339256, guid: c748fb92280162f4cacb17fe52687247, type: 2}
   - {fileID: 1144415396723640, guid: 2956d9905a62a67448d26c0253c9860c, type: 2}
   - {fileID: 1554693797339256, guid: 9c44785fba345814c9d40d644ec825b5, type: 2}
+  - {fileID: 1554693797339256, guid: d7cfd194d81959547be8249ea65161ad, type: 2}
   PowerUPPercentage: 20
   blockHp: 1
 --- !u!114 &114467736344552538
@@ -1033,6 +1037,7 @@ MonoBehaviour:
   - {fileID: 1554693797339256, guid: c748fb92280162f4cacb17fe52687247, type: 2}
   - {fileID: 1144415396723640, guid: 2956d9905a62a67448d26c0253c9860c, type: 2}
   - {fileID: 1554693797339256, guid: 9c44785fba345814c9d40d644ec825b5, type: 2}
+  - {fileID: 1554693797339256, guid: d7cfd194d81959547be8249ea65161ad, type: 2}
   PowerUPPercentage: 20
   blockHp: 1
 --- !u!114 &114546508034545140
@@ -1062,6 +1067,7 @@ MonoBehaviour:
   - {fileID: 1554693797339256, guid: c748fb92280162f4cacb17fe52687247, type: 2}
   - {fileID: 1144415396723640, guid: 2956d9905a62a67448d26c0253c9860c, type: 2}
   - {fileID: 1554693797339256, guid: 9c44785fba345814c9d40d644ec825b5, type: 2}
+  - {fileID: 1554693797339256, guid: d7cfd194d81959547be8249ea65161ad, type: 2}
   PowerUPPercentage: 20
   blockHp: 1
 --- !u!114 &114637753613562148
@@ -1080,6 +1086,7 @@ MonoBehaviour:
   - {fileID: 1554693797339256, guid: c748fb92280162f4cacb17fe52687247, type: 2}
   - {fileID: 1144415396723640, guid: 2956d9905a62a67448d26c0253c9860c, type: 2}
   - {fileID: 1554693797339256, guid: 9c44785fba345814c9d40d644ec825b5, type: 2}
+  - {fileID: 1554693797339256, guid: d7cfd194d81959547be8249ea65161ad, type: 2}
   PowerUPPercentage: 20
   blockHp: 1
 --- !u!114 &114689693286392682
@@ -1098,6 +1105,7 @@ MonoBehaviour:
   - {fileID: 1554693797339256, guid: c748fb92280162f4cacb17fe52687247, type: 2}
   - {fileID: 1144415396723640, guid: 2956d9905a62a67448d26c0253c9860c, type: 2}
   - {fileID: 1554693797339256, guid: 9c44785fba345814c9d40d644ec825b5, type: 2}
+  - {fileID: 1554693797339256, guid: d7cfd194d81959547be8249ea65161ad, type: 2}
   PowerUPPercentage: 20
   blockHp: 1
 --- !u!114 &114763279730469820
@@ -1116,6 +1124,7 @@ MonoBehaviour:
   - {fileID: 1554693797339256, guid: c748fb92280162f4cacb17fe52687247, type: 2}
   - {fileID: 1144415396723640, guid: 2956d9905a62a67448d26c0253c9860c, type: 2}
   - {fileID: 1554693797339256, guid: 9c44785fba345814c9d40d644ec825b5, type: 2}
+  - {fileID: 1554693797339256, guid: d7cfd194d81959547be8249ea65161ad, type: 2}
   PowerUPPercentage: 20
   blockHp: 1
 --- !u!114 &114772145112141682

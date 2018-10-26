@@ -12,13 +12,13 @@ public class LevelLoader : MonoBehaviour
 	[SerializeField] private Text progressText;
 	
 	
-	public void LoadLevel(int sceneIndex)
+	public void LoadScene(int sceneIndex)
 	{
 		loadScreen.SetActive(true);
-		StartCoroutine(LoadLevelAsync(sceneIndex));
+		StartCoroutine(LoadSceneAsync(sceneIndex));
 	}
 
-	IEnumerator LoadLevelAsync(int sceneIndex)
+	IEnumerator LoadSceneAsync(int sceneIndex)
 	{
 		AsyncOperation loadInformation = SceneManager.LoadSceneAsync(sceneIndex);
 		while (!loadInformation.isDone)

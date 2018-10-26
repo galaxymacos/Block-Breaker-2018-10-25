@@ -340,6 +340,7 @@ MonoBehaviour:
   - {fileID: 1554693797339256, guid: c748fb92280162f4cacb17fe52687247, type: 2}
   - {fileID: 1144415396723640, guid: 2956d9905a62a67448d26c0253c9860c, type: 2}
   - {fileID: 1554693797339256, guid: 9c44785fba345814c9d40d644ec825b5, type: 2}
+  - {fileID: 1554693797339256, guid: d7cfd194d81959547be8249ea65161ad, type: 2}
   PowerUPPercentage: 20
   blockHp: 2
 --- !u!114 &114324054368085114
@@ -358,6 +359,7 @@ MonoBehaviour:
   - {fileID: 1554693797339256, guid: c748fb92280162f4cacb17fe52687247, type: 2}
   - {fileID: 1144415396723640, guid: 2956d9905a62a67448d26c0253c9860c, type: 2}
   - {fileID: 1554693797339256, guid: 9c44785fba345814c9d40d644ec825b5, type: 2}
+  - {fileID: 1554693797339256, guid: d7cfd194d81959547be8249ea65161ad, type: 2}
   PowerUPPercentage: 20
   blockHp: 2
 --- !u!114 &114701341706422778
@@ -376,6 +378,7 @@ MonoBehaviour:
   - {fileID: 1554693797339256, guid: c748fb92280162f4cacb17fe52687247, type: 2}
   - {fileID: 1144415396723640, guid: 2956d9905a62a67448d26c0253c9860c, type: 2}
   - {fileID: 1554693797339256, guid: 9c44785fba345814c9d40d644ec825b5, type: 2}
+  - {fileID: 1554693797339256, guid: d7cfd194d81959547be8249ea65161ad, type: 2}
   PowerUPPercentage: 20
   blockHp: 2
 --- !u!114 &114896342834103742
@@ -394,6 +397,7 @@ MonoBehaviour:
   - {fileID: 1554693797339256, guid: c748fb92280162f4cacb17fe52687247, type: 2}
   - {fileID: 1144415396723640, guid: 2956d9905a62a67448d26c0253c9860c, type: 2}
   - {fileID: 1554693797339256, guid: 9c44785fba345814c9d40d644ec825b5, type: 2}
+  - {fileID: 1554693797339256, guid: d7cfd194d81959547be8249ea65161ad, type: 2}
   PowerUPPercentage: 20
   blockHp: 2
 --- !u!114 &114940999397974506
@@ -412,6 +416,7 @@ MonoBehaviour:
   - {fileID: 1554693797339256, guid: c748fb92280162f4cacb17fe52687247, type: 2}
   - {fileID: 1144415396723640, guid: 2956d9905a62a67448d26c0253c9860c, type: 2}
   - {fileID: 1554693797339256, guid: 9c44785fba345814c9d40d644ec825b5, type: 2}
+  - {fileID: 1554693797339256, guid: d7cfd194d81959547be8249ea65161ad, type: 2}
   PowerUPPercentage: 20
   blockHp: 2
 --- !u!212 &212301330691700734

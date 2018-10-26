@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
@@ -38,6 +39,8 @@ public class GameManager : MonoBehaviour {
     private int bestScore = 0;
     [SerializeField] private int maxFireballBullets = 3;
     private int fireballBulletLeft = 0;
+    [SerializeField] private float speedUpDuration = 3f;
+    [SerializeField] private float speedUpTimePass = 0f ;
     public bool inGame = true;
 
     private Color originalBallColor = Color.white;
@@ -53,14 +56,21 @@ public class GameManager : MonoBehaviour {
 
     public GameObject[] allBalls;
 
+    public Vector3 initPos = Vector3.zero;
+
     void LoadLvl() {
-        ball.GetComponent<SpriteRenderer>().color = originalBallColor;
+        GameObject.FindWithTag("ball").GetComponent<SpriteRenderer>().color = originalBallColor;
         if (currBoard) {
             Destroy(currBoard);
         }
 
         blocks = 0;
+        if(currLvl<levels.Length)
         currBoard = Instantiate(levels[currLvl]);
+        else {
+            currLvl = levels.Length - 1;
+            currBoard = Instantiate(levels[levels.Length - 1]);
+        }
         backgroundCover.GetComponent<MeshRenderer>().material.mainTexture = Backgrounds[currLvl].texture;
     }
 
@@ -177,7 +187,6 @@ public class GameManager : MonoBehaviour {
     private void LoadPlayerInfo() {
 //        PlayerPrefs.DeleteAll();    // TODO delete later
         rankingList = PlayerPrefs.GetString("RankingList", "");
-        print(rankingList);
         if (rankingList != "") {
             string[] rankForEachPlayer = rankingList.Split(';');
             for (int i = 0; i < rankForEachPlayer.Length; i++) {
@@ -243,10 +252,15 @@ public class GameManager : MonoBehaviour {
     void Update() {
         if (inGame) {
             if (Input.GetKey(KeyCode.Escape)) {
-                print("game paused");
-
                 PauseGame();
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.T)) {
+            currLvl++;
+            ClearAllEffect();
+            GameObject.FindGameObjectWithTag("ball").GetComponent<MoveBall>().Init();
+            LoadLvl();
         }
         if (isPaddleBig) {
             countDownTimer -= Time.deltaTime;
@@ -306,18 +320,24 @@ public class GameManager : MonoBehaviour {
 
     private float timeScaleInGame = 1.0f;
 
+    [SerializeField]private Slider slider;
+    private float sliderValue;
+    
     public void PauseGame() {
         inGame = false;
         audioM.SetFloat("volPause", 700);
         timeScaleInGame = Time.timeScale;
         Time.timeScale = 0;
         pauseScreen.SetActive(true);
+        sliderValue = slider.value;    // Keep track of the where the slider handle is when pausing game
+
     }
 
     public void ResumeGame() {
         inGame = true;
         audioM.SetFloat("volPause", 22000);
         Time.timeScale = timeScaleInGame;
+        slider.value = sliderValue;
     }
 
     private float gameWidth = 5f;
@@ -337,5 +357,24 @@ public class GameManager : MonoBehaviour {
         explosion.panStereo = soundPosition / (gameWidth / 2);
 
         explosion.Play();
+    }
+
+    private int dragonBallCount = 0;
+
+    [SerializeField] private TextMeshProUGUI victoryText;
+    [SerializeField] private TextMeshProUGUI dragonBallText;
+    
+    public void AddDragonBall() {
+        Debug.Log("add dragon ball");
+        dragonBallCount++;
+        dragonBallText.text = dragonBallCount.ToString();
+        MoveBall newBallScript = GameObject.FindGameObjectWithTag("ball").GetComponent<MoveBall>();
+        if (dragonBallCount == 7) {
+            inGame = false;
+            newBallScript.Init();
+            score.text = "You win!\nScore:" + point.ToString("D8");
+            rankingBoard.SetActive(true);
+            victoryText.gameObject.SetActive(true);
+        }
     }
 }

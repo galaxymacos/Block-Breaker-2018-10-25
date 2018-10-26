@@ -25,13 +25,16 @@ public class RankingScreen : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (isConfirmedQuit) {
-            if (Input.GetKeyDown(KeyCode.I)) {
-                gameOverScreen.SetActive(true);
-                gameObject.SetActive(false);
-            }
-            SaveScoreToFile();
+            isConfirmedQuit = false;
+            StartCoroutine("GoToEndScreen");            
         }
-        
+    }
+
+    IEnumerator GoToEndScreen() {
+        yield return new WaitForSeconds(5*Time.deltaTime);
+        gameOverScreen.SetActive(true);
+        gameObject.SetActive(false);
+        SaveScoreToFile();
     }
 
     public void UploadPlayerScore() {

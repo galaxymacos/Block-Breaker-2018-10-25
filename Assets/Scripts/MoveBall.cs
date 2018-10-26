@@ -16,7 +16,6 @@ public class MoveBall : MonoBehaviour {
 
     private Transform myParent;
 
-    private Vector3 initPos;
 
 //	[SerializeField] private float paddleDirBlindSpot = 1.5f;
     [SerializeField] private float deflectionFactor = 1.5f;
@@ -36,14 +35,16 @@ public class MoveBall : MonoBehaviour {
         code = GameObject.Find("GameManager").GetComponent<GameManager>();
         ball = GetComponent<Rigidbody2D>();
         ball.simulated = false;
-        initPos = transform.localPosition; // retrieve the coordinate relative to parent
+        if (code.initPos == Vector3.zero) {
+            code.initPos = transform.localPosition;
+        }
         myParent = transform.parent;
     }
 
     public void Init() {
-        transform.parent = myParent;
+        transform.SetParent(myParent);
 
-        transform.localPosition = initPos;
+        transform.localPosition = code.initPos;
         ball.simulated = false;
         ball.velocity = new Vector2(0, 0);
         onlyOnce = false;
@@ -57,7 +58,7 @@ public class MoveBall : MonoBehaviour {
         if ((Input.GetButtonUp("Jump") || isDupBall) && !onlyOnce && code.inGame) {
             onlyOnce = true;
             ball.simulated = true;
-            ball.transform.parent = null;
+            ball.transform.SetParent(null);
             if(!isDupBall)
             ball.AddForce(new Vector2(dir, dir));
             else {
