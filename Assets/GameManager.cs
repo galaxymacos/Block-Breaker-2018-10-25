@@ -19,7 +19,8 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private GameObject pauseScreen;
 
     public int point = 0;
-    [SerializeField] private Text score;
+//    [SerializeField] private Text score;
+    [SerializeField] private TextMeshProUGUI score;
 
     private int blocks = 0;
     [SerializeField] private GameObject[] levels;

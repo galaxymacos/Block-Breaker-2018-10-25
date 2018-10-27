@@ -9,15 +9,7 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="GameManager.cs" t="Include" />
-        <e p="Plugins" t="Include">
-          <e p="GitHub" t="Include">
-            <e p="Editor" t="Include">
-              <e p="credits.txt" t="Include" />
-              <e p="eula.txt" t="Include" />
-              <e p="ExtensionLoader.cs" t="Include" />
-            </e>
-          </e>
-        </e>
+        <e p="GhostBehavior.cs" t="Include" />
         <e p="RankingScreen.cs" t="Include" />
         <e p="SampleScenes" t="Include">
           <e p="Menu" t="Include">
@@ -55,6 +47,8 @@
           <e p="UnbreakableBrickBehavior.cs" t="Include" />
         </e>
         <e p="SliderMovement.cs" t="Include" />
+        <e p="SpeedDownBehavior.cs" t="Include" />
+        <e p="SplashScreen.cs" t="Include" />
         <e p="Standard Assets" t="Include">
           <e p="2D" t="Include">
             <e p="Scripts" t="Include">

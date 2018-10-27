@@ -6,7 +6,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class RankingScreen : MonoBehaviour {
-    [SerializeField] private InputField playerName;
+//    [SerializeField] private InputField playerName;
+    [SerializeField] private TMP_InputField playerName;
     [SerializeField] private TextMeshProUGUI first;
     [SerializeField] private TextMeshProUGUI second;
     [SerializeField] private TextMeshProUGUI third;
@@ -24,14 +25,11 @@ public class RankingScreen : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (isConfirmedQuit) {
-            isConfirmedQuit = false;
-            StartCoroutine("GoToEndScreen");            
-        }
+
     }
 
     IEnumerator GoToEndScreen() {
-        yield return new WaitForSeconds(5*Time.deltaTime);
+        yield return new WaitForSeconds(5);
         gameOverScreen.SetActive(true);
         gameObject.SetActive(false);
         SaveScoreToFile();
@@ -56,7 +54,7 @@ public class RankingScreen : MonoBehaviour {
         second.text = code.playersInfo[1].DisplayMessage();
         third.text = code.playersInfo[2].DisplayMessage();
         
-        isConfirmedQuit = true;
+        StartCoroutine("GoToEndScreen");     
     }
 
     private void SaveScoreToFile() {
