@@ -9,8 +9,6 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="GameManager.cs" t="Include" />
-        <e p="GhostBehavior.cs" t="Include" />
-        <e p="RankingScreen.cs" t="Include" />
         <e p="SampleScenes" t="Include">
           <e p="Menu" t="Include">
             <e p="Scripts" t="Include">
@@ -36,6 +34,7 @@
           <e p="BrickBehaviour.cs" t="Include" />
           <e p="BrickMover.cs" t="Include" />
           <e p="DuplicateBehavior.cs" t="Include" />
+          <e p="GhostBehavior.cs" t="Include" />
           <e p="GreenMushroomBehavior.cs" t="Include" />
           <e p="LevelLoader.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
@@ -43,12 +42,13 @@
           <e p="MovePaddle.cs" t="Include" />
           <e p="OptionSettings.cs" t="Include" />
           <e p="ProtectionPanelPowerUpBehavior.cs" t="Include" />
+          <e p="RankingScreen.cs" t="Include" />
           <e p="RedMushroomBehavior.cs" t="Include" />
+          <e p="SliderMovement.cs" t="Include" />
+          <e p="SpeedDownBehavior.cs" t="Include" />
+          <e p="SplashScreen.cs" t="Include" />
           <e p="UnbreakableBrickBehavior.cs" t="Include" />
         </e>
-        <e p="SliderMovement.cs" t="Include" />
-        <e p="SpeedDownBehavior.cs" t="Include" />
-        <e p="SplashScreen.cs" t="Include" />
         <e p="Standard Assets" t="Include">
           <e p="2D" t="Include">
             <e p="Scripts" t="Include">

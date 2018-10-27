@@ -9,13 +9,11 @@ public class MovePaddle : MonoBehaviour {
 
     [SerializeField] private float positionLimit = 2.0f;
     [SerializeField] private GameObject pauseScreen;
-    private GameObject ball;
 
     private GameManager code;
 
     // Use this for initialization
     void Start() {
-        ball = GameObject.Find("ball");
         code = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 

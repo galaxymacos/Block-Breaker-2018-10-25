@@ -11,6 +11,7 @@ public class SpeedDownBehavior : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		code = GameObject.Find("GameManager").GetComponent<GameManager>();
+
 	}
 	
 	// Update is called once per frame
@@ -22,7 +23,6 @@ public class SpeedDownBehavior : MonoBehaviour {
 	private bool hasCollided;
 	
 	private void OnTriggerEnter2D(Collider2D other) {
-
 		if (other.gameObject.CompareTag("paddle")&&!hasCollided) {
 			hasCollided = true;
 			gameObject.transform.position = new Vector3(1000,0,0);
@@ -34,11 +34,9 @@ public class SpeedDownBehavior : MonoBehaviour {
 	IEnumerator CountDown() {
 		code.AddDragonBall();
 		Time.timeScale += 1f;
-		Debug.Log("game is speeded up");
-		yield return new WaitForSeconds(3*Time.deltaTime);	// 3s
+		yield return new WaitForSeconds(duration*Time.timeScale);	// default: 5s
 		Time.timeScale -= 1f;
 		Destroy(gameObject);
-		Debug.Log("Coroutine ended");
 
 	}
 }

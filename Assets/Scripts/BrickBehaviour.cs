@@ -10,7 +10,6 @@ public class BrickBehaviour : MonoBehaviour {
 
     [SerializeField] private int PowerUPPercentage = 20;
     [SerializeField] private int blockHp = 1;
-    private GameObject ball;
     private bool isHit;
     private GameManager code;
 
@@ -20,8 +19,6 @@ public class BrickBehaviour : MonoBehaviour {
         for (int i = 0; i < blockHp; i++) {
             code.AddBlock();
         }
-
-        ball = GameObject.Find("ball");
     }
 
     // Update is called once per frame
@@ -30,8 +27,6 @@ public class BrickBehaviour : MonoBehaviour {
 
     private void OnCollisionExit2D(Collision2D other) {
         blockHp--;
-
-        Debug.Log("HP: " + blockHp);
         float destiny = Random.Range(1, 100);
         if (destiny > 0 && destiny <= PowerUPPercentage) {
             GameObject itemReadyToDrop = dropItemList[Random.Range(0, dropItemList.Length)];
@@ -40,7 +35,6 @@ public class BrickBehaviour : MonoBehaviour {
 
         code.AddPoints();
         if (blockHp <= 0) {
-            Debug.Log("Destroy a block in collision");
             code.PlayExplosionSound(gameObject.transform.position.x);
             Destroy(gameObject);
         }

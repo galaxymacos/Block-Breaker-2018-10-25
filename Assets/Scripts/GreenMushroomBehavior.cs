@@ -6,8 +6,6 @@ using Random = UnityEngine.Random;
 
 public class GreenMushroomBehavior : MonoBehaviour
 {
-    private bool isBig = false;
-
     private GameManager code;
 
     // Use this for initialization

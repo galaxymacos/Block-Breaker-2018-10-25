@@ -21,10 +21,9 @@ GameObject:
   - component: {fileID: 4007550449962512}
   - component: {fileID: 212798665680388142}
   - component: {fileID: 58937717710152124}
-  - component: {fileID: 114609037697059122}
   - component: {fileID: 114051856392432286}
   m_Layer: 0
-  m_Name: SpeedupPowerDown
+  m_Name: SpeedDownPowerDown
   m_TagString: powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1554693797339256}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0600128, y: -1.6113139, z: 0}
+  m_LocalPosition: {x: -0.3184114, y: -1.8489444, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,7 +56,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.64
+  m_Radius: 0.32
 --- !u!114 &114051856392432286
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,18 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a99d21d88698c834a842bbdd832d8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114609037697059122
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1554693797339256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 211e774f984d00a43b079adb1ec3e3f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  copiedBall: {fileID: 4175299988468930, guid: c3dcbd7b7aef95541949330e7b5c3912, type: 2}
+  duration: 5
 --- !u!212 &212798665680388142
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -116,7 +104,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dafa48a2c727a4d40a96c91132d004a3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 25862df9eea0e0442adb0680bd73ec01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

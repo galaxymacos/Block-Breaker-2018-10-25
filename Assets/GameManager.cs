@@ -40,8 +40,6 @@ public class GameManager : MonoBehaviour {
     private int bestScore = 0;
     [SerializeField] private int maxFireballBullets = 3;
     private int fireballBulletLeft = 0;
-    [SerializeField] private float speedUpDuration = 3f;
-    [SerializeField] private float speedUpTimePass = 0f ;
     public bool inGame = true;
 
     private Color originalBallColor = Color.white;
@@ -366,7 +364,6 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI dragonBallText;
     
     public void AddDragonBall() {
-        Debug.Log("add dragon ball");
         dragonBallCount++;
         dragonBallText.text = dragonBallCount.ToString();
         MoveBall newBallScript = GameObject.FindGameObjectWithTag("ball").GetComponent<MoveBall>();

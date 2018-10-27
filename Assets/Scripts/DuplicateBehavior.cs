@@ -14,7 +14,7 @@ public class DuplicateBehavior : MonoBehaviour
     void Start()
     {
         code = GameObject.Find("GameManager").GetComponent<GameManager>();
-        ball = GameObject.Find("ball");
+        ball = GameObject.FindWithTag("ball");
     }
 
     // Update is called once per frame
