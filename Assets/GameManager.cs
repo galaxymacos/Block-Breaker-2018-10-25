@@ -242,7 +242,7 @@ public class GameManager : MonoBehaviour {
         var paddle = player.GetComponent<SpriteRenderer>();
         paddle.size -= new Vector2(paddle.size.x / 2, 0);
         var paddleCollider = player.GetComponent<BoxCollider2D>();
-        paddleCollider.size += new Vector2(paddleCollider.size.x, 0);
+        paddleCollider.size -= new Vector2(paddleCollider.size.x, 0);
         isPaddleBig = false;
         countDownTimer = 10f; // BUG restore timer to original
     }

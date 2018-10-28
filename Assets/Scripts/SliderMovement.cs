@@ -15,8 +15,9 @@ public class SliderMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		var userInput = Input.GetAxis("Horizontal");
-		userInput = userInput / Time.timeScale;
-		slider.value += userInput*moveSpeed;
+		slider.value += Input.GetAxis("Mouse X") / Time.timeScale * moveSpeed;
+//		var userInput = Input.GetAxis("Horizontal");
+//		userInput = userInput / Time.timeScale;
+//		slider.value += userInput*moveSpeed;
 	}
 }

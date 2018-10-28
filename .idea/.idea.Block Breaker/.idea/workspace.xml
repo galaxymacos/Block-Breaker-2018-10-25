@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9aa336b3-48c1-4ae1-9c4e-86d59b076529" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GhostBehavior.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GhostBehavior.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PowerUps/SpeedupPowerDown.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PowerUps/SpeedupPowerDown.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RankingScreen.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RankingScreen.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BrickBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BrickBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DuplicateBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DuplicateBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GreenMushroomBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GreenMushroomBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MovePaddle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MovePaddle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SliderMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SliderMovement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpeedDownBehavior.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpeedDownBehavior.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SplashScreen.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SplashScreen.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +16,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/MovePaddle.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
-              <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+              <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
               <folding>
                 <marker date="1540614001929" expanded="false" signature="6:114" ph="..." />
                 <marker date="1540614001929" expanded="true" signature="156:831" ph="{...}" />
@@ -157,7 +139,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/SliderMovement.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="9" column="44" lean-forward="true" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+              <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
               <folding>
                 <marker date="1540429012935" expanded="false" signature="6:100" ph="..." />
                 <marker date="1540429012935" expanded="true" signature="181:533" ph="{...}" />
@@ -171,8 +153,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/SpeedDownBehavior.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+            <state relative-caret-position="421">
+              <caret line="24" column="53" lean-forward="true" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
               <folding>
                 <marker date="1540617126002" expanded="false" signature="6:78" ph="..." />
                 <marker date="1540617126002" expanded="true" signature="127:934" ph="{...}" />
@@ -206,7 +188,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/BrickBehaviour.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="672">
-              <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
               <folding>
                 <marker date="1540616511468" expanded="false" signature="6:146" ph="..." />
                 <marker date="1540616511468" expanded="true" signature="192:2290" ph="{...}" />
@@ -367,8 +349,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor" />
       <item itemvalue="Attach to Unity Editor.Attach to Unity Editor &amp; Play" />
+      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -402,12 +384,12 @@
       <workItem from="1540496752447" duration="15885000" />
       <workItem from="1540612364379" duration="29000" />
       <workItem from="1540612426776" duration="139000" />
-      <workItem from="1540612594940" duration="3068000" />
+      <workItem from="1540612594940" duration="3669000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73243000" />
+    <option name="totallyTimeSpent" value="73844000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -625,7 +607,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/MovePaddle.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
-          <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
           <folding>
             <marker date="1540614001929" expanded="false" signature="6:114" ph="..." />
             <marker date="1540614001929" expanded="true" signature="156:831" ph="{...}" />
@@ -639,7 +621,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/BrickBehaviour.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
-          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
           <folding>
             <marker date="1540616511468" expanded="false" signature="6:146" ph="..." />
             <marker date="1540616511468" expanded="true" signature="192:2290" ph="{...}" />
@@ -675,7 +657,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/SliderMovement.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="9" column="44" lean-forward="true" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
           <folding>
             <marker date="1540429012935" expanded="false" signature="6:100" ph="..." />
             <marker date="1540429012935" expanded="true" signature="181:533" ph="{...}" />
@@ -774,8 +756,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/SpeedDownBehavior.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        <state relative-caret-position="421">
+          <caret line="24" column="53" lean-forward="true" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
           <folding>
             <marker date="1540617126002" expanded="false" signature="6:78" ph="..." />
             <marker date="1540617126002" expanded="true" signature="127:934" ph="{...}" />
