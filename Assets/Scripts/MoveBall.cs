@@ -58,7 +58,9 @@ public class MoveBall : MonoBehaviour {
         if ((Input.GetButtonUp("Jump") || isDupBall) && !onlyOnce && code.inGame) {
             onlyOnce = true;
             ball.simulated = true;
+            var position = ball.transform.position;
             ball.transform.SetParent(null);
+            ball.transform.position = position;
             if(!isDupBall)
             ball.AddForce(new Vector2(dir, dir));
             else {
